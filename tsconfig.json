@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": false,
+    "outDir": "./dist",
+    "importHelpers": true,
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "types": [
+      "node",
+      "axios"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules",
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ]
+}

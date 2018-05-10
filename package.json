@@ -1,0 +1,31 @@
+{
+  "name": "node-wolfram-alpha",
+  "version": "0.0.1",
+  "description": "A tiny Wolfram API wrapper with async support.",
+  "main": "index.js",
+  "author": "Kamil Solecki <kamilczak020@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kamilczak020/node-wolfram-alpha"
+  },
+  "bugs": {
+    "url": "https://github.com/Kamilczak020/node-wolfram-alpha/issues"
+  },
+  "homepage": "https://github.com/Kamilczak020/node-wolfram-alpha#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/node": "^10.0.6",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^4.0.2",
+    "tslib": "^1.9.0",
+    "typescript": "^2.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "xml-js": "^1.6.2"
+  }
+}
