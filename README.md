@@ -1,2 +1,8 @@
 # node-wolfram-alpha
-A tiny nodejs wrapper for Wolfram Alpha API
+An extremely tiny Wolfram Alpha API wrapper for Node.js
+
+## Features
+* ✓ Single dependency (axios)
+* ✓ Promise-based
+* ✓ Full type definitions (response types extracted from Wolfram Docs)
+
