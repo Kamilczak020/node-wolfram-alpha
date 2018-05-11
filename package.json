@@ -2,7 +2,8 @@
   "name": "node-wolfram-alpha",
   "version": "0.0.1",
   "description": "A tiny Wolfram API wrapper with async support.",
-  "main": "index.js",
+  "main": "dist/main-bundle.js",
+  "types": "dist/index.d.ts",
   "author": "Kamil Solecki <kamilczak020@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -12,20 +13,30 @@
   "bugs": {
     "url": "https://github.com/Kamilczak020/node-wolfram-alpha/issues"
   },
-  "homepage": "https://github.com/Kamilczak020/node-wolfram-alpha#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development --display-optimization-bailout --display-error-details",
+    "build": "webpack --mode production --display-optimization-bailout --display-error-details"
   },
+  "homepage": "https://github.com/Kamilczak020/node-wolfram-alpha#readme",
   "devDependencies": {
     "@types/axios": "^0.14.0",
+    "@types/chai": "^4.1.3",
+    "@types/mocha": "^5.2.0",
     "@types/node": "^10.0.6",
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^4.0.2",
+    "awesome-typescript-loader": "^5.0.0",
+    "chai": "^4.1.2",
+    "dts-generator-webpack-plugin": "^1.0.0",
+    "mocha": "^5.1.1",
+    "ts-node": "^6.0.3",
     "tslib": "^1.9.0",
-    "typescript": "^2.8.3"
+    "tslint": "^5.10.0",
+    "tslint-loader": "^3.6.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.8.2",
+    "webpack-bundle-analyzer": "^2.11.2",
+    "webpack-cli": "^2.1.3"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "xml-js": "^1.6.2"
+    "axios": "^0.18.0"
   }
 }
