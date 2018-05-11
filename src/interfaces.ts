@@ -87,6 +87,35 @@ export interface Pod {
   title: string;
 }
 
+export interface QueryOptions {
+  assumption?: string;
+  async?: string;
+  excludepodid?: string;
+  format?: string;
+  formattimeout?: number | string;
+  ignorecase?: boolean | string;
+  includepodid?: string;
+  ip?: string;
+  latlong?: string;
+  location?: string;
+  mag?: number | string;
+  maxwidth?: number | string;
+  parsetimeout?: number | string;
+  plotwidth?: number | string;
+  podindex?: number | string;
+  podstate?: string;
+  podtimeout?: number | string;
+  podtitle?: string;
+  reinterpret?: boolean | string;
+  scanner?: string;
+  scantimeout?: number | string;
+  sig?: string;
+  totaltimeout?: number | string;
+  translation?: boolean | string;
+  width?: number | string;
+  units?: string;
+}
+
 export interface QueryResult {
   assumptions: Assumption | Array<Assumption>;
   datatypes: string;
