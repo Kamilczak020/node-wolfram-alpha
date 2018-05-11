@@ -11,7 +11,7 @@ An extremely tiny Wolfram Alpha API wrapper for Node.js
 
 ## Usage
 ```typescript
-import * as WolframClient from 'node-wolfram-client';
+import * as WolframClient from 'node-wolfram-alpha';
 
 const client = new WolframClient('your api key');
 
