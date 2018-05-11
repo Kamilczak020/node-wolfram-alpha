@@ -1,31 +1,37 @@
-import axios from 'axios';
-import { WolframResponse } from './interfaces';
+import axios, { AxiosPromise } from 'axios';
+import { QueryOptions, WolframResponse } from './interfaces';
 
-
-export class Wolfram {
-  private appId: string;
+export class WolframClient {
+  protected appId: string;
 
   constructor(appId: string) {
     this.appId = appId;
   }
 
-  public async get(query: string) {
-    const endpoint = `http://api.wolframalpha.com/v2/query?appid=${this.appId}&input=${query}&output=json&reinterpret=true`;
+  public query(query: string, options?: QueryOptions): AxiosPromise<WolframResponse> {
+    const url = `http://api.wolframalpha.com/v2/query?appid=${this.appId}&input=${encodeURIComponent(query)}&output=json`;
 
+    // Momma once said: 'reflect yoself!', so I did.
+    if (!!options) {
+        const optionsUri = [...Object.entries(options)].map(([key, value]) => {
+          return `${key}=${encodeURIComponent(value.toString())}`;
+        }).join('&');
+
+        return this.sendRequest([url, optionsUri].join('&'));
+      }
+
+    return this.sendRequest(url);
+  }
+
+  public getFromUrl(url: string): AxiosPromise<WolframResponse> {
+   return this.sendRequest(url);
+  }
+
+  protected sendRequest(request: string): AxiosPromise<WolframResponse> {
     try {
-      return await axios.request<WolframResponse>({
-        url: encodeURI(endpoint)
-      });
+      return axios.request<WolframResponse>({url: request});
     } catch (error) {
       throw new Error(error.message);
     }
-
   }
 }
-
-async function start() {
-  const response = await new Wolfram('5YR9G2-KE3J4XULQW').get('kitty danger');
-  console.log(response.data.queryresult);
-}
-
-start();
