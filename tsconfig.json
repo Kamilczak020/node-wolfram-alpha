@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "allowSyntheticDefaultImports": false,
     "outDir": "./dist",
     "importHelpers": true,
@@ -18,12 +17,11 @@
     ],
     "typeRoots": [
       "node_modules/@types",
-      "node_modules",
+      "node_modules"
     ]
   },
   "exclude": [
-    "node_modules",
-    "src/interfaces.ts"
+    "node_modules"
   ],
   "include": [
     "src/**/*",
