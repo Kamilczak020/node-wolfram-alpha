@@ -4,7 +4,7 @@
     "allowSyntheticDefaultImports": false,
     "outDir": "./dist",
     "importHelpers": true,
-    "target": "es6",
+    "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
