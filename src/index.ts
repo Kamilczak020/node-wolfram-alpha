@@ -8,7 +8,7 @@ import { QueryOptions, WolframResponse } from './interfaces';
  * You can generate your own App ID here:
  * https://developer.wolframalpha.com/portal/myapps/
  */
-export default class WolframClient {
+export class WolframClient {
   protected appId: string;
 
   constructor(appId: string) {
