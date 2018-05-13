@@ -1,0 +1,7 @@
+dist/*
+src/*
+.gitignore
+tsconfig.json
+tslint.json
+wepback.config.js
+yarn.lock
