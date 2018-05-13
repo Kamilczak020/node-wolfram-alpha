@@ -1,6 +1,6 @@
 {
   "name": "node-wolfram-alpha",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tiny Wolfram API wrapper with async support.",
   "main": "dist/main-bundle.js",
   "types": "dist/index.d.ts",
